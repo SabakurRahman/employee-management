@@ -1,0 +1,21 @@
+<h3>Employee List</h3>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let eemployee of employees">
+        <td>{{eemployee.frist_name}}</td>
+        <td>{{eemployee.last_name}}</td>
+        <td>{{eemployee.email_id}}</td>
+        <td><Button (click)="updateEmploye(eemployee.id)" class="btn btn-info">update</Button></td>
+        <td><Button (click)="deleteEmploye(eemployee.id)" class="btn btn-danger">Delete</Button></td>
+      </tr>
+     
+      
+    </tbody>
+  </table>
